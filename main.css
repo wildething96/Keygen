@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 8rem 10rem;
+  box-sizing: border-box;
+  font-size: 3em;
+  font-weight: 600;
+  color: rgb(245, 243, 240);
+  background: rgba(0, 0, 0, 0)
+    linear-gradient(to right, rgb(29, 43, 100), rgb(248, 205, 218)) repeat
+    scroll 0% 0%;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  text-align: center;
+  transition: 1s ease;
+  opacity: 0;
+}
+
+#event {
+  font-size: 5em;
+  text-align: center;
+  margin: 13% 0;
+  transition: 1s ease;
+  text-shadow: 0 0 10px rgb(208, 255, 0);
+}
+
+.flex > div {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 50%;
+  max-width: 400px;
+  margin: 0 1rem;
+}
+
+.flex div div:nth-child(1) {
+  background: rgb(53, 53, 51);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 1rem;
+  text-shadow: 0 0 10px rgb(208, 255, 0);
+  border: 1px solid rgb(255, 230, 0);
+}
+
+.flex div div:nth-child(2) {
+  height: 4rem;
+  background: rgb(197, 194, 27);
+  border: 1px solid rgb(255, 230, 0);
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .flex {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #event {
+    font-size: 2em;
+  }
+  .flex div {
+    margin: 1rem auto;
+  }
+  .flex div div{
+    font-size: 0.5em;
+  }
+  .flex div div:nth-child(2) {
+    height: 2rem;
+  }
+  body{
+    padding: 0.1rem;
+  }
+}
